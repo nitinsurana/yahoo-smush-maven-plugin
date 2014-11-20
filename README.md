@@ -19,7 +19,7 @@ and run `mvn install` to install the plugin in your local repository.
             <version>1.0-SNAPSHOT</version>
             <executions>
                 <execution>
-                    <phase>generate-sources</phase>
+                    <phase>generate-sources</phase> <!-- Can also use 'prepare-package' phase as per requirements-->
                     <goals>
                         <goal>compress</goal>
                     </goals>
