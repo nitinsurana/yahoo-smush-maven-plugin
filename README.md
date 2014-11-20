@@ -36,3 +36,9 @@ and run `mvn install` to install the plugin in your local repository.
     </plugins>
   </build>
 ```
+
+
+
+#Credits
+
+Thanks to @abhirama for creating https://github.com/abhirama/smushit
