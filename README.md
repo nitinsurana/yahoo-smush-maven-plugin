@@ -13,11 +13,26 @@ and run `mvn install` to install the plugin in your local repository.
 3.  Add the following to your project's pom.xml
 <build>
     <plugins>
-      <plugin>
-        <groupId>com.snapwiz</groupId>
-        <artifactId>yahoosmush</artifactId>
-        <version>1.0-SNAPSHOT</version>
-      </plugin>
+       <plugin>
+            <groupId>com.snapwiz</groupId>
+            <artifactId>yahoosmush</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <executions>
+                <execution>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>compress</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <imageDir>${basedir}/src/main/webapp/webresources/images</imageDir>
+                <verbose>true</verbose>
+                <verbose>true</verbose>
+                <dryRun>false</dryRun>
+                <imgExtensions>png</imgExtensions>
+            </configuration>
+        </plugin>
     </plugins>
   </build>
 ```
