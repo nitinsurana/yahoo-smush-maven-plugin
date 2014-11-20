@@ -7,19 +7,17 @@ package com.snapwiz;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
 
-/**
- * Echos an object string to the output screen.
- *
- * @goal echo
- * @requiresProject false
- */
+@Mojo(name="echo")
 public class EchoMojo extends AbstractMojo {
     /**
      * Any Object to print out.
      *
      * @parameter expression="${echo.message}" default-value="Hello World..."
      */
+    @Parameter(property = "echo.message", defaultValue = "Hello World")
     private Object message;
 
     public void execute()

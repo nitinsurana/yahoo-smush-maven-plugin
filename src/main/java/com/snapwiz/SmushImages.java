@@ -131,7 +131,7 @@ public class SmushImages {
     public static final String COMMAND_LINE_OPTION_TRUE = "true";
     public static final String COMMAND_LINE_OPTION_FALSE = "false";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String... args) throws IOException {
         if (args.length == 0) {
             printUsageInstructions();
             System.exit(0);
